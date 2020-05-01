@@ -26,7 +26,7 @@ app.use(express.static("public", { "extensions": "html" }));
 // const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
 // // mongoose.connect(MONGODB_URI);
 // TODO: create mongodb connection with mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds121176.mlab.com:21176/heroku_tr7bdjh5", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
