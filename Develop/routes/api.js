@@ -31,15 +31,8 @@ router.put("/api/workouts/:id", (req, res) => {
       _id: (req.params.id),
     },
     {
-      $set: {
-        name: req.body.name,
-        type: req.body.type,
-        weight: req.body.weight,
-        sets: req.body.sets,
-        reps: req.body.reps,
-        duration: req.body.duration,
-        distance: req.body.distance
-        
+      $push: {
+        exercises: req.body
       },
     },
     (error, data) => {
