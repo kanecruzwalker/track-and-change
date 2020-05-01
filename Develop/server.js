@@ -1,6 +1,9 @@
 const express = require("express");
 const logger = require("morgan");
 
+
+
+
 // TODO: import mongoose
 const mongoose = require('mongoose');
 
@@ -19,6 +22,9 @@ app.use(express.json());
 
 app.use(express.static("public", { "extensions": "html" }));
 
+
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
+// // mongoose.connect(MONGODB_URI);
 // TODO: create mongodb connection with mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
